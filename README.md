@@ -21,12 +21,30 @@ You'll also need OpenSCAD in order to generate the `.stl` file.
 
 Run:
 
-```
-python3 qrcode_scad.py
+```bash
+python3 qrcode_scad.py > my_scad.scad
 
 # or
 
-./qrcode_scad.py
+./qrcode_scad.py > my_scad.scad
 ```
 
-The input string will be used as the data that will be stored in the QR code.
+The input string will be used as the data that will be stored in the QR
+code. This will generate a `.scad` file.
+
+### Using `qrcode_stl.sh`
+
+This script calls `qrcode_scad.py` and them calls `openscad` to generate the
+`.stl` file. Run:
+
+```bash
+
+bash qrcode_stl.sh
+
+# or
+
+./qrcode_stl.sh
+```
+
+Just like before, the input string will be used as the data that will be stored
+in the QR code. This will generate a `.stl` file, ready for slicing.
